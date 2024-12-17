@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background-color: #8B4513; /* Warna coklat */
+            color: black; /* Warna teks hitam untuk kontras */
+            font-family: Arial, sans-serif;
+        }
+        nav {
+            background-color: #8B4513; /* Warna coklat */
+    padding: 15px;
+    text-align: center; /* Memusatkan teks di dalam nav */
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+        }
+        nav a:hover {
+            background-color: #6F4C3E; /* Warna coklat lebih gelap saat hover */
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.8); /* Latar belakang putih semi-transparan untuk konten */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none; /* Sembunyikan semua konten secara default */
+            opacity: 0; /* Mulai dengan transparansi */
+            transition: opacity 0.5s ease; /* Transisi untuk efek fade */
+        }
+        h1 {
+            text-align: center; /* Memusatkan hanya judul Aljabar */
+        }
+        h2, h3 {
+            color: #5d3a29; /* Warna coklat untuk subjudul */
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #5d3a29; /* Garis border coklat */
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #d9c6a8; /* Warna latar belakang untuk header tabel */
+        }
+        p {
+            text-align: justify; /* Mengatur teks agar terjustifikasi */
+            color: black; /* Warna teks hitam */
+        }
+        .exercise {
+            border: 1px solid #5d3a29; /* Garis border coklat untuk kotak soal */
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.9); /* Latar belakang putih semi-transparan untuk kotak soal */
+        }
+        .feedback {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .correct {
+            color: green;
+        }
+        .incorrect {
+            color: red;
+        }
+        .solution {
+            display: none; /* Sembunyikan pembahasan secara default */
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #5d3a29; /* Garis border coklat untuk pembahasan */
+            background-color: rgba(255, 255, 255, 0.9); /* Latar belakang putih semi-transparan untuk pembahasan */
+        }
+        .references {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.9); /* Latar belakang putih semi-transparan untuk daftar pustaka */
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#" onclick="showSection('home')">Home</a>
+    <a href="#" onclick="showSection('pengertian')">Pengertian</a>
+    <a href="#" onclick="showSection('sejarah')">Sejarah</a>
+    <a href="#" onclick="showSection('tabel')">Perjalanan Penemuan Rumus</a>
+    <a href="#" onclick="showSection('materi')">Materi</a>
+    <a href="#" onclick="showSection('metode')">Metode</a>
+    <a href="#" onclick="showSection('soal')">Latihan Soal</a>
+    <a href="#" onclick="showSection('referensi')">Referensi</a>
+    <a href="#" onclick="showSection('tim')">Tim Kami</a>
+
+</nav>
+
+<div class="container" id="home">
+    <h1>Aljabar</h1>
+    <img src="https://mmc.tirto.id/image/otf/970x0/2017/05/27/Ilustrasi-muhammad-ibn-musa-IST_ratio-16x9.jpg" alt="Muhammad ibn Musa Al-Khwarizmi">
+    <p><strong>Selamat datang di Dunia Aljabar!</strong></p>
+    <p>Ayo, temukan serunya belajar aljabar bersama kami dan buktikan bahwa matematika bisa menjadi sahabat terbaik Anda!</p>
+
+</div>
+
+<div class="container" id="pengertian">
+    <img src="https://i.pinimg.com/736x/98/07/7b/98077b8815c7ff838d56036e018e1e96.jpg" style="width: 50%; height: auto; margin: 0 auto; display: block;">
+    <h2>Pengertian Aljabar</h2>
+    <p>Aljabar adalah cabang matematika yang mempelajari simbol-simbol (biasanya berupa huruf) dan aturan-aturan untuk memanipulasi simbol-simbol tersebut. Dalam aljabar, simbol-simbol ini biasanya mewakili bilangan atau nilai yang tidak diketahui, memungkinkan kita untuk membuat pernyataan matematis yang lebih umum dan menyelesaikan masalah dengan cara yang sistematis. Aljabar juga berfungsi sebagai jembatan antara aritmetika dan kalkulus, memberikan alat untuk menyelesaikan masalah yang lebih kompleks.</p>
+    <p>Aljabar tidak hanya digunakan dalam matematika murni, tetapi juga memiliki aplikasi luas dalam berbagai bidang seperti fisika, ekonomi, teknik, dan ilmu komputer. Dengan menggunakan aljabar, kita dapat menyusun model matematis untuk menggambarkan fenomena dunia nyata, memecahkan masalah, dan membuat prediksi berdasarkan data yang ada.</p>
+</div>
+
+<div class="container" id="sejarah">
+    <h2>Sejarah Penemuan Aljabar</h2>
+    <p>Aljabar memiliki akar yang mendalam dalam peradaban kuno, seperti <strong>Babilonia</strong> dan <strong>Mesir</strong>. Di Babilonia (2000–300 SM), para ahli matematika menyelesaikan persamaan kuadrat dan kubik menggunakan metode numerik. Perhitungan mereka tercatat di tablet tanah liat yang digunakan untuk menyelesaikan masalah praktis, seperti pembagian tanah dan perdagangan. Di Mesir kuno, dokumen seperti Papirus Rhind (1650 SM) menunjukkan bagaimana orang Mesir menggunakan metode aritmetika untuk memecahkan persoalan sehari-hari, seperti pembagian makanan dan pengukuran lahan.</p>
+    <p>Istilah <strong>"aljabar"</strong> berasal dari karya matematikawan Persia, <strong>Al-Khwarizmi</strong>, dalam bukunya Al-Kitab al-Mukhtasar fi Hisab al-Jabr wa’l-Muqabala (abad ke-9). Buku ini memperkenalkan metode sistematis untuk menyelesaikan persamaan linier dan kuadrat, menjadi dasar <strong>aljabar modern</strong>. Kata "al-jabr" sendiri berarti "pemulihan" atau "penyatuan," yang mencerminkan teknik manipulasi persamaan. Karya ini diterjemahkan ke bahasa Latin pada abad ke-12, memperkenalkan aljabar ke dunia Barat dan mendorong perkembangan matematika di Eropa.</p>
+    <P>Pada abad ke-13 hingga 16, aljabar mulai berkembang di Eropa melalui kontribusi tokoh-tokoh seperti <strong>Fibonacci</strong>, yang memperkenalkan konsep aljabar dari dunia Islam. Pada abad ke-16, <strong>Girolamo Cardano</strong>  mempublikasikan metode penyelesaian persamaan kubik dan kuartik dalam bukunya Ars Magna. Perkembangan ini menandai awal transisi dari aljabar tradisional ke aljabar simbolik, di mana notasi matematis mulai distandardisasi.</P>
+    <P>Abad ke-17 hingga 19 menjadi era revolusi aljabar. <strong>René Descartes</strong> menghubungkan aljabar dengan geometri melalui <strong>koordinat Cartesian</strong>, sementara <strong>Isaac Newton</strong> dan <strong>Gottfried Wilhelm Leibniz</strong> memperluas cakupan aljabar ke dalam kalkulus. Pada abad ke-19, <strong>Évariste Galois</strong> memberikan kontribusi penting dalam teori grup, membawa aljabar ke tingkat abstraksi yang lebih tinggi dengan mempelajari struktur seperti grup, cincin, dan lapangan.</P>
+    <P>Aljabar terus berkembang hingga era modern, dengan aplikasi yang luas di berbagai bidang seperti fisika, ilmu komputer, dan kriptografi. Dari perhitungan praktis di Babilonia hingga abstraksi tinggi dalam teori grup dan ruang vektor, aljabar telah membuktikan dirinya sebagai cabang matematika yang tak tergantikan, memainkan peran penting dalam ilmu pengetahuan dan teknologi hingga saat ini.</P>
+</div>
+
+<div class="container" id="tabel">
+    <h2>Perjalanan Penemuan Rumus Aljabar</h2>
+    <table>
+        <tr>
+            <th>Tahun</th>
+            <th>Penemu</th>
+            <th>Kontribusi</th>
+        </tr>
+        <tr>
+            <td>2000–300 SM</td>
+            <td>Matematikawan Babilonia</td>
+            <td>Menyelesaikan persamaan kuadrat dan kubik menggunakan pendekatan numerik.</td>
+        </tr>
+        <tr>
+            <td>1650 SM</td>
+            <td>Matematikawan Mesir</td>
+            <td>Mencatat metode aritmetika dalam Papirus Rhind.</td>
+        </tr>
+        <tr>
+            <td>Abad ke-9</td>
+            <td>Al-Khwarizmi</td>
+            <td>Menulis buku "Al-Kitab al-Mukhtasar fi Hisab al-Jabr wa’l-Muqabala" yang memperkenalkan konsep pemecahan persamaan secara sistematis.</td>
+        </tr>
+        <tr>
+            <td>Abad ke-12</td>
+            <td>Para penerjemah Eropa</td>
+            <td>Menerjemahkan karya Al-Khwarizmi ke dalam bahasa Latin, memperkenalkan aljabar ke dunia Barat.</td>
+        </tr>
+        <tr>
+            <td>Abad ke-16</td>
+            <td>Gerard Desargues</td>
+            <td>Mengembangkan geometri analitik yang menghubungkan aljabar dan geometri.</td>
+        </tr>
+        <tr>
+            <td>Abad ke-19</td>
+            <td>George Boole</td>
+            <td>Mengembangkan aljabar Boolean, yang menjadi dasar logika matematika dan teori himpunan.</td>
+        </tr>
+    </table>
+</div>
+
+<div class="container" id="materi">
+    <h2>Materi Aljabar</h2>
+    <h3>1. Variabel dan Konstanta</h3>
+    <p>Variabel adalah simbol yang digunakan untuk mewakili angka yang tidak diketahui, sedangkan konstanta adalah angka tetap. Variabel sering kali dilambangkan dengan huruf seperti x, y, atau z. Contoh: dalam ekspresi 3x + 5, x adalah variabel dan 5 adalah konstanta. Variabel memungkinkan kita untuk mengekspresikan hubungan matematis secara umum. Dalam konteks yang lebih luas, variabel juga dapat digunakan untuk menggambarkan perubahan dalam situasi tertentu. Misalnya, dalam ekonomi, variabel dapat mewakili harga barang, jumlah permintaan, atau pendapatan, yang semuanya dapat berubah seiring waktu. Dengan menggunakan variabel, kita dapat membuat model matematis yang lebih fleksibel dan dapat disesuaikan dengan berbagai kondisi.</p>
+    <p>Konstanta, di sisi lain, adalah nilai tetap yang tidak berubah. Dalam banyak kasus, konstanta digunakan untuk memberikan nilai dasar dalam suatu persamaan atau fungsi. Misalnya, dalam rumus luas persegi panjang, L = p × l, p dan l adalah     variabel yang mewakili panjang dan lebar, sedangkan L adalah konstanta yang menunjukkan luas. Memahami perbedaan antara variabel dan konstanta sangat penting dalam aljabar, karena ini adalah dasar untuk menyusun dan menyelesaikan persamaan.</p>
+
+    <h3>2. Persamaan</h3>
+    <p>Persamaan adalah pernyataan yang menyatakan bahwa dua ekspresi adalah sama. Contoh: 2x + 3 = 7. Untuk menyelesaikan persamaan, kita mencari nilai variabel yang membuat pernyataan tersebut benar. Dalam contoh di atas, kita dapat menyelesaikan persamaan dengan langkah-langkah berikut: pertama, kita kurangi 3 dari kedua sisi, sehingga kita mendapatkan 2x = 4. Kemudian, kita bagi kedua sisi dengan 2 untuk mendapatkan x = 2. Persamaan juga dapat memiliki lebih dari satu solusi, seperti dalam kasus persamaan kuadrat.</p>
+    <p>Persamaan dapat dibedakan menjadi beberapa jenis, seperti persamaan linear, kuadrat, dan eksponensial. Persamaan linear adalah persamaan yang dapat digambarkan dengan garis lurus pada grafik, sedangkan persamaan kuadrat memiliki bentuk parabola. Memahami jenis-jenis persamaan ini penting untuk dapat memilih metode yang tepat dalam menyelesaikannya. Misalnya, persamaan kuadrat dapat diselesaikan menggunakan rumus kuadrat, faktorisasi, atau metode penyelesaian grafis.</p>
+
+    <h3>3. Fungsi</h3>
+    <p>Fungsi adalah hubungan antara dua variabel, di mana setiap nilai input memiliki satu nilai output. Fungsi biasanya dinyatakan dalam bentuk f(x), di mana x adalah variabel independen. Contoh: f(x) = 2x + 3. Dalam fungsi ini, untuk setiap nilai x, kita dapat menghitung nilai f(x). Fungsi dapat digambarkan dalam bentuk grafik, di mana sumbu x mewakili nilai input dan sumbu y mewakili nilai output. Grafik fungsi memberikan visualisasi yang jelas tentang bagaimana perubahan pada variabel independen mempengaruhi variabel dependen.</p>
+    <p>Fungsi juga dapat diklasifikasikan menjadi berbagai jenis, seperti fungsi linear, kuadratik, dan eksponensial. Fungsi linear memiliki grafik yang berbentuk garis lurus, sedangkan fungsi kuadratik memiliki grafik berbentuk parabola. Fungsi eksponensial, di sisi lain, menunjukkan pertumbuhan yang cepat dan memiliki bentuk grafik yang khas. Memahami berbagai jenis fungsi dan sifat-sifatnya sangat penting dalam aljabar, karena ini membantu kita dalam menganalisis dan memecahkan masalah yang melibatkan hubungan antar variabel.</p>
+
+    <h3>4. Polinomial</h3>
+    <p>Polinomial adalah ekspresi yang terdiri dari variabel dan koefisien, yang dihubungkan oleh operasi penjumlahan, pengurangan, dan perkalian. Polinomial dapat memiliki satu atau lebih suku. Contoh: 4x² + 3x - 5 adalah polinomial derajat dua, karena suku dengan pangkat tertinggi adalah x². Polinomial dapat diklasifikasikan berdasarkan derajatnya, di mana derajat adalah pangkat tertinggi dari variabel dalam polinomial tersebut. Misalnya, polinomial derajat satu disebut linear, derajat dua disebut kuadratik, dan seterusnya.</p>
+    <p>Polinomial memiliki banyak aplikasi dalam berbagai bidang, termasuk fisika, ekonomi, dan teknik. Dalam fisika, polinomial sering digunakan untuk menggambarkan gerakan objek, sedangkan dalam ekonomi, polinomial dapat digunakan untuk memodelkan hubungan antara harga dan permintaan. Selain itu, polinomial juga dapat digunakan dalam interpolasi dan aproksimasi fungsi, yang sangat berguna dalam analisis data dan pemodelan matematis.</p>
+
+    <h3>5. Faktorisasi</h3>
+    <p>Faktorisasi adalah proses memecah polinomial menjadi produk dari polinomial yang lebih sederhana. Ini penting untuk menyelesaikan persamaan dan memahami sifat-sifat polinomial. Contoh sederhana dari faktorisasi adalah x² - 9, yang dapat difaktorkan menjadi (x - 3)(x + 3). Proses faktorisasi membantu kita untuk menemukan akar-akar dari polinomial, yang merupakan nilai-nilai di mana polinomial tersebut sama dengan nol. Dengan mengetahui akar-akar ini, kita dapat lebih memahami perilaku grafik dari polinomial tersebut.</p>
+    <p>Faktorisasi juga dapat dilakukan dengan mencari faktor persekutuan terbesarnya (FPB) dari suku-suku     dalam polinomial. Misalnya, dalam polinomial 2x² + 4x, kita dapat mengeluarkan faktor persekutuan terbesarnya, yaitu 2x, sehingga kita mendapatkan 2x(x + 2). Proses ini tidak hanya mempermudah perhitungan, tetapi juga memberikan wawasan tentang struktur polinomial. Dalam banyak kasus, faktorisasi adalah langkah awal yang penting dalam menyelesaikan persamaan polinomial dan analisis lebih lanjut.</p>
+
+    <h3>6. Persamaan Kuadrat</h3>
+    <p>Persamaan kuadrat adalah persamaan yang berbentuk ax² + bx + c = 0, di mana a, b, dan c adalah konstanta, dan a ≠ 0. Solusi dari persamaan kuadrat dapat ditemukan menggunakan rumus kuadrat: x = (-b ± √(b² - 4ac)) / 2a. Diskriminan (D = b² - 4ac) memainkan peran penting dalam menentukan jumlah dan jenis solusi yang dimiliki oleh persamaan kuadrat. Jika D > 0, persamaan memiliki dua solusi berbeda; jika D = 0, persamaan memiliki satu solusi ganda; dan jika D < 0, persamaan tidak memiliki solusi real.</p>
+    <p>Persamaan kuadrat memiliki banyak aplikasi dalam kehidupan sehari-hari, seperti dalam perhitungan area, pelacakan gerakan, dan analisis keuangan. Misalnya, dalam fisika, persamaan kuadrat sering digunakan untuk menggambarkan gerakan proyektil, di mana posisi objek dapat dinyatakan sebagai fungsi waktu. Dengan memahami cara menyelesaikan dan menganalisis persamaan kuadrat, kita dapat menerapkan konsep ini dalam berbagai situasi praktis dan teoritis.</p>
+</div>
+
+<div class="container" id="metode">
+    <h2>Metode-metode dalam Aljabar</h2>
+    <h3>1. Metode Grafik</h3>
+    <p>Adalah penyelesaian dari sistem persamaan linear menggunakan cara menggambar bentuk kurva dari masing-masing sistem persamaan linear. Titik perpotongan dari garis atau kurva ini yang menjadi cara penyelesaian dari sistem persamaan linier.</p>
+
+    <h3>2. Metode Eliminasi</h3>
+    <p>Dalam menyelesaikan sistem persamaan linear menggunakan metode eliminasi yang digunakan apabila ingin mencari penyelesaian dari suatu variabel sehingga dipakai untuk melakukan eliminasi variabel yang lain. Seperti adanya dua variabel x dan y dalam suatu sistem persamaan linear, sehingga mencari nilai x sehingga harus dilakukan eliminasi.</p>
+
+    <h3>3. Metode Substitusi</h3>
+    <p>Suatu sistem persamaan linear harus memuat variabel x dan y, sehingga penyelesaian menggunakan metode substitusi adalah dengan cara mengubah salah satu persamaan. Perubahan yang menjadi persamaan fungsi terlebih dulu, yakni x sebagai fungsi y atau permainan kata sebaliknya setelah itu substitusikan persamaan ke persamaan yang lain hingga diperoleh nilai x dan y.</p>
+
+    <h3>4. Metode Eliminasi-Substitusi</h3>
+    <p>Penggunaan metode ini menjadi suatu metode gabungan dari metode eliminasi serta substitusi, khususnya dalam menyelesaikan sebuah sistem persamaan linear. Karena itu harus dipahami dengan baik dan benar bagaimana caranya menggunakan beberapa sistem dalam proses penyelesaian persamaan.</p>
+</div>
+
+<div class="container" id="soal">
+    <h2>Latihan Soal</h2>
+    <div class="exercise">
+        <h3>Soal 1:</h3>
+        <p>Selesaikan persamaan berikut: 3x + 5 = 20</p>
+        <input type="text" id="answer1" placeholder="Masukkan jawaban Anda">
+        <button onclick="checkAnswer(1, 5)">Submit</button>
+        <div class="feedback" id="feedback1"></div>
+        <div class="solution" id="solution1">
+            <h4>Pembahasan:</h4>
+            <p>Langkah 1: Kurangi 5 dari kedua sisi: <br>
+            3x = 20 - 5 <br>
+            3x = 15 <br>
+            Langkah 2: Bagi kedua sisi dengan 3: <br>
+            x = 15 / 3 <br>
+            x = 5</p>
+        </div>
+    </div>
+
+    <div class="exercise">
+        <h3>Soal 2:</h3>
+        <p>Faktorkan polinomial berikut: x² - 5x + 6</p>
+        <input type="text" id="answer2" placeholder="Masukkan jawaban Anda">
+        <button onclick="checkAnswer(2, '(x-2)(x-3)')">Submit</button>
+        <div class="feedback" id="feedback2"></div>
+        <div class="solution" id="solution2">
+            <h4>Pembahasan:</h4>
+            <p>Polinomial ini dapat difaktorkan menjadi: <br>
+            (x- 2)(x - 3)</p>
+        </div>
+    </div>
+
+    <div class="exercise">
+        <h3>Soal 3:</h3>
+        <p>Selesaikan persamaan kuadrat berikut: x² - 4x - 5 = 0</p>
+        <input type="text" id="answer3" placeholder="Masukkan jawaban Anda (pisahkan dengan koma)">
+        <button onclick="checkAnswer(3, '5,-1')">Submit</button>
+        <div class="feedback" id="feedback3"></div>
+        <div class="solution" id="solution3">
+            <h4>Pembahasan:</h4>
+            <p>Kita dapat menggunakan rumus kuadrat: <br>
+            a = 1, b = -4, c = -5 <br>
+            D = b² - 4ac = (-4)² - 4(1)(-5) = 16 + 20 = 36 <br>
+            x = (4 ± √36) / (2 * 1) <br>
+            x = (4 ± 6) / 2 <br>
+            x₁ = 5, x₂ = -1</p>
+        </div>
+    </div>
+
+    <div class="exercise">
+        <h3>Soal 4:</h3>
+        <p>Jika f(x) = 3x + 2, hitung f(4).</p>
+        <input type="text" id="answer4" placeholder="Masukkan jawaban Anda">
+        <button onclick="checkAnswer(4, 14)">Submit</button>
+        <div class="feedback" id="feedback4"></div>
+        <div class="solution" id="solution4">
+            <h4>Pembahasan:</h4>
+            <p>f(4) = 3(4) + 2 = 12 + 2 = 14</p>
+        </div>
+    </div>
+
+    <div class="exercise">
+        <h3>Soal 5:</h3>
+        <p>Faktorkan polinomial berikut: 2x² + 8x</p>
+        <input type="text" id="answer5" placeholder="Masukkan jawaban Anda">
+        <button onclick="checkAnswer(5, '2x(x+4)')">Submit</button>
+        <div class="feedback" id="feedback5"></div>
+        <div class="solution" id="solution5">
+            <h4>Pembahasan:</h4>
+            <p>Polinomial ini dapat difaktorkan menjadi: <br>
+            2x(x + 4)</p>
+        </div>
+    </div>
+</div>
+
+<div class="container" id="referensi">
+    <h2>Referensi</h2>
+    <p>1. Al-Khwarizmi, Muhammad ibn Musa. <a href="https://id.wikipedia.org/wiki/Al-Khwarizmi" target="_blank">Al-Khwarizmi - Wikipedia</a></p>
+    <p>2. "Aljabar." <a href="https://www.britannica.com/science/algebra" target="_blank">Encyclopaedia Britannica</a></p>
+    <p>3. "Sejarah Aljabar." <a href="https://www.ilmusosial.id/sejarah-aljabar/" target="_blank">Ilmu Sosial</a></p>
+    <p>4. "Pengertian Aljabar." <a href="https://www.khanacademy.org/math/algebra" target="_blank">Khan Academy</a></p>
+</div>
+
+<div class="container" id="tim">
+    <h2>Kelompok 3 (Prodi Matematika):</h2>
+    <p>1. Riana Khansa           (1305623007)
+    <p>2. Carissa Astrid Alissya (1305623009)
+    <p>3. Lyra Ranti Yamika      (1305623010)
+    <p>4. Sahasika Puspa Syifa R (1305623012)
+</div>
+
+<script>
+    function showSection(sectionId) {
+        // Sembunyikan semua kontainer
+        const containers = document.querySelectorAll('.container');
+        containers.forEach(container => {
+            container.style.display = 'none';
+            container.style.opacity = '0'; // Set opacity ke 0 untuk transisi
+        });
+
+        // Tampilkan kontainer yang dipilih
+        const selectedContainer = document.getElementById(sectionId);
+        selectedContainer.style.display = 'block';
+        setTimeout(() => {
+            selectedContainer.style.opacity = '1'; // Set opacity ke 1 setelah ditampilkan
+        }, 10); // Delay kecil untuk memastikan transisi berfungsi
+    }
+
+    // Tampilkan bagian pertama saat halaman dimuat
+    window.onload = function() {
+        showSection('home');
+    };
+
+    function checkAnswer(questionNumber, correctAnswer) {
+        const userAnswer = document.getElementById(`answer${questionNumber}`).value.trim();
+        const feedbackElement = document.getElementById(`feedback${questionNumber}`);
+        const solutionElement = document.getElementById(`solution${questionNumber}`);
+        
+        if (Array.isArray(correctAnswer)) {
+            // Jika jawaban yang benar adalah array (misalnya untuk soal yang memiliki lebih dari satu jawaban)
+            const userAnswers = userAnswer.split(',').map(ans => ans.trim());
+            const isCorrect = userAnswers.length === correctAnswer.length && userAnswers.every(ans => correctAnswer.includes(ans));
+            if (isCorrect) {
+                feedbackElement.innerHTML = "<span class='correct'>Jawaban Anda benar!</span>";
+            } else {
+                feedbackElement.innerHTML = "<span class='incorrect'>Jawaban Anda salah. Coba lagi!</span>";
+            }
+        } else {
+            // Jika jawaban yang benar adalah string
+            if (userAnswer === correctAnswer.toString()) {
+                feedbackElement.innerHTML = "<span class='correct'>Jawaban Anda benar!</span>";
+            } else {
+                feedbackElement.innerHTML = "<span class='incorrect'>Jawaban Anda salah. Coba lagi!</span>";
+            }
+        }
+
+        // Tampilkan pembahasan setelah jawaban diberikan
+        solutionElement.style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
